@@ -23,7 +23,8 @@ app.get("/user", (req, res) => {
     const page = req.query.page;
     const limit = req.query.limit;
     
-    //index start from 0 
+    //basic pagination 
+    //index start from 0
     //for page number = 2 and limit number 3
     const startIndex = (page - 1) * limit; //3rd index ================================= 4th user
     const endIndex = page * limit; //6th index = 7th user =========== but give 5th index(6th user) because end element is not included
